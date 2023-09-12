@@ -26,15 +26,20 @@ for details.
 ## Installation
 
 
-
+### Download using Gradle
+1. Add the following repository to your project's root `build.gradle` file at the end of the `repositories` block:
 ```gradle
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
 
+```
+````
 dependencies {
     implementation 'com.github.Bilal512:SimbaAds:Tag'
 }
+```
+
