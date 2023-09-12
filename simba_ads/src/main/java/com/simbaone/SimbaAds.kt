@@ -99,6 +99,16 @@ class SimbaAds private constructor(
             )
             intersAd.show(activity)
         }
+
+        @JvmStatic
+        fun showInterstitialAd(
+            activity: Activity,
+            adListener: IntersAd.AdListener
+        ) {
+            checkLibrary()
+            intersAd.adListener(adListener)
+            intersAd.show(activity)
+        }
     }
 
     init {

@@ -62,3 +62,21 @@ class App: Application() {
 }
 ````
 
+3. To show interstitial ad from anywhere just call (For Kotlin)
+````
+SimbaAds.showInterstitialAd(
+    activity = this@MainActivity,
+    onAdDismissed = {
+        Log.e("MainActivity", "onAdDismissed")
+    },
+    onAdClicked = {
+        Log.e("MainActivity", "onAdClicked")
+    },
+    onAdImpression = {
+        Log.e("MainActivity", "onAdImpression")
+    },
+    onAdShowed = {
+        Log.e("MainActivity", "onAdShowed")
+    }
+)
+````
