@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="sm_colorPrimary">#2DB6FF</color>
+    <color name="sm_colorWhite">#FFFFFF</color>
+    <color name="sm_colorGray">#BBBDBD</color>
+    <color name="sm_colorBlack">#000000</color>
+    <color name="sm_colorAccent">#03DAC5</color>
+    <color name="sm_colorRed">#FF0000</color>
+
+
+
+</resources>
