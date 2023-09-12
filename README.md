@@ -1,10 +1,12 @@
+[![GitHub Release](https://img.shields.io/github/v/release/Bilal512/SimbaAds)](https://github.com/your-username/Bilal512/SimbaAds)
+
 # SimbaAds
 Supercharge your Android app's monetization with our all-in-one Ad Integration Library. Effortlessly integrate Facebook and AdMob ads in just a few lines of code. Maximize revenue and user engagement with our easy-to-use, hassle-free solution. Elevate your app's earning potential today!
 
 ## License
 
 This project is licensed under the [Apache License 2.0](LICENSE) - see the [LICENSE](LICENSE) file for details.
-[![GitHub Release](https://img.shields.io/github/v/release/Bilal512/SimbaAds)](https://github.com/your-username/Bilal512/SimbaAds)
+
 [![GitHub Issues](https://img.shields.io/github/issues/Bilal512/SimbaAds)](https://github.com/Bilal512/SimbaAds/issues)
 
 Short, catchy description of your library goes here. Explain what your library does and why it's useful.
