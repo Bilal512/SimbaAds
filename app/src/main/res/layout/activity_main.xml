@@ -6,14 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.simbaone.simba_ads.admob.AdmobNativeAdMedia
+        android:id="@+id/admobNative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/admobBanner"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.simbaone.simba_ads.admob.AdmobBanner
+        android:id="@+id/admobBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/admobNative"/>
+
     <Button
         android:id="@+id/showInterstitial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Show Ad"
+        android:layout_marginBottom="@dimen/_20sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

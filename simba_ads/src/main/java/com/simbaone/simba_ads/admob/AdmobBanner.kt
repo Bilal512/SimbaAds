@@ -5,17 +5,26 @@ import android.app.Activity
 import android.content.Context
 import android.util.AttributeSet
 import android.util.DisplayMetrics
+import android.util.Log
 import android.view.LayoutInflater
 import android.widget.FrameLayout
+import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
+import com.simbaone.checkLibrary
 import com.simbaone.simba_ads.R
 
-class AdmobBanner(private val context: Context, private val attrs: AttributeSet) : FrameLayout(context, attrs) {
+class AdmobBanner(
+    private val context: Context,
+    attrs: AttributeSet
+) : FrameLayout(context, attrs) {
+
     private lateinit var adView: AdView
 
-    fun init(context: Context) {
+    init {
+        Log.e("Banner", "init")
+        checkLibrary()
         if (!isInEditMode) {
 
             var adId = ""
@@ -23,10 +32,13 @@ class AdmobBanner(private val context: Context, private val attrs: AttributeSet)
             context.theme
                 .obtainStyledAttributes(
                     attrs,
-                    R.styleable.AdmobNativeAdMedia, 0, 0
+                    R.styleable.AdmobBanner, 0, 0
                 )
                 .apply {
-                    adId = getString(R.styleable.AdmobBanner_AD_id).orEmpty()
+                    adId = AdmobIdUtils.processAdId(
+                        getString(R.styleable.AdmobBanner_AD_id).orEmpty(),
+                        ADMOB_ADS.BANNER
+                    )
                 }
 
             val inflater = LayoutInflater.from(context)
@@ -55,6 +67,13 @@ class AdmobBanner(private val context: Context, private val attrs: AttributeSet)
 
         // Step 5 - Start loading the ad in the background.
         adView.loadAd(adRequest)
+        adView.adListener = object : AdListener() {
+            override fun onAdLoaded() {
+                super.onAdLoaded()
+                Log.e("Banner", "Banner Ad Loaded")
+            }
+        }
+
     }
 
     // Step 2 - Determine the screen width (less decorations) to use for the ad width.

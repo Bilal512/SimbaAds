@@ -17,15 +17,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        findViewById<Button>(R.id.showInterstitial).apply {
+        /*findViewById<Button>(R.id.showInterstitial).apply {
             ObjectAnimator.ofFloat(this, "translationY", 100f).apply {
                 duration = 3000
                 interpolator = LinearInterpolator()
                 // Using KTX extension function:
-                doOnEnd { /** Do whatever you want **/ }
+                doOnEnd { *//** Do whatever you want **//* }
                 start()
             }
-        }
+        }*/
 
         findViewById<Button>(R.id.showInterstitial).setOnClickListener {
             SimbaAds.showInterstitialAd(

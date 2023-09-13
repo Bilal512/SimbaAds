@@ -20,6 +20,7 @@ import com.google.android.gms.ads.nativead.MediaView
 import com.google.android.gms.ads.*
 import com.google.android.gms.ads.formats.NativeAdOptions.ADCHOICES_TOP_RIGHT
 import com.google.android.gms.ads.nativead.*
+import com.simbaone.checkLibrary
 import com.simbaone.simba_ads.R
 import com.simbaone.simba_ads.utils.SmUtils
 import com.simbaone.simba_ads.utils.getcolor
@@ -28,8 +29,10 @@ import java.lang.RuntimeException
 import kotlin.contracts.ExperimentalContracts
 import kotlin.contracts.contract
 
-class AdmobNativeAdMedia(private val context: Context, private val attrs: AttributeSet) :
-    FrameLayout(context, attrs), LifecycleObserver {
+class AdmobNativeAdMedia(
+    private val context: Context,
+    private val attrs: AttributeSet
+) : FrameLayout(context, attrs), LifecycleObserver {
 
     val TAG = "AdmobNativeAdSetup"
 
@@ -46,6 +49,7 @@ class AdmobNativeAdMedia(private val context: Context, private val attrs: Attrib
 
 
     init {
+        checkLibrary()
         (context as LifecycleOwner).lifecycle.addObserver(this)
 
         layoutParams = ViewGroup.LayoutParams(
@@ -84,14 +88,17 @@ class AdmobNativeAdMedia(private val context: Context, private val attrs: Attrib
             removeAllViews()
             addView(adView)
 
-            var adId = ""
+            var adId: String
             context.theme
                 .obtainStyledAttributes(
                     attrs,
                     R.styleable.AdmobNativeAdMedia, 0, 0
                 )
                 .apply {
-                    adId = getString(R.styleable.AdmobNativeAdMedia_AD_id).orEmpty()
+                    adId = AdmobIdUtils.processAdId(
+                        getString(R.styleable.AdmobNativeAdMedia_AD_id).orEmpty(),
+                        ADMOB_ADS.NATIVE
+                    )
                 }
 
             requireNotEmpty(adId) { "Ad Id cannot be empty" }
