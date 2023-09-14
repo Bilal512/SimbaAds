@@ -1,4 +1,4 @@
-[![GitHub Release](https://img.shields.io/github/v/release/Bilal512/SimbaAds)](https://github.com/your-username/Bilal512/SimbaAds)
+[//]: # ([![GitHub Release]&#40;https://img.shields.io/github/v/release/Bilal512/SimbaAds&#41;]&#40;https://github.com/your-username/Bilal512/SimbaAds&#41;)
 
 [![](https://jitpack.io/v/Bilal512/SimbaAds.svg)](https://jitpack.io/#Bilal512/SimbaAds)
 
