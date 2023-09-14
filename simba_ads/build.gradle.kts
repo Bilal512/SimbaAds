@@ -11,7 +11,7 @@ val githubProperties = Properties()
 githubProperties.load(FileInputStream(rootProject.file("github.properties")))
 
 val versionName get() = "1.0.0"
-val getArtificatId = "SimbaAds"
+val getArtificatId = "simba_ads"
 
 android {
     namespace = "com.simbaone.simba_ads"
@@ -26,7 +26,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
