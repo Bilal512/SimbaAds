@@ -13,7 +13,7 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import com.simbaone.checkLibrary
-import com.simbaone.simba_ads.R
+import com.simbaone.R
 
 class AdmobBanner(
     private val context: Context,

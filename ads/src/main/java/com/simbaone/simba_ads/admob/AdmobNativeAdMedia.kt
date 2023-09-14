@@ -21,7 +21,7 @@ import com.google.android.gms.ads.*
 import com.google.android.gms.ads.formats.NativeAdOptions.ADCHOICES_TOP_RIGHT
 import com.google.android.gms.ads.nativead.*
 import com.simbaone.checkLibrary
-import com.simbaone.simba_ads.R
+import com.simbaone.R
 import com.simbaone.simba_ads.utils.SmUtils
 import com.simbaone.simba_ads.utils.getcolor
 import java.lang.Exception

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import com.facebook.ads.AdSize
 import com.facebook.ads.AdView
-import com.simbaone.simba_ads.R
+import com.simbaone.R
 import com.simbaone.simba_ads.utils.SmUtils
 
 class FacebookBanner(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs) {

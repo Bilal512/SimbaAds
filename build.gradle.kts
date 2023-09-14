@@ -12,5 +12,6 @@ buildscript {
     }
     dependencies {
 //        classpath ("com.google.gms:google-services:4.3.10")
+        classpath("com.github.dcendents:android-maven-plugin:1.0")
     }
 }

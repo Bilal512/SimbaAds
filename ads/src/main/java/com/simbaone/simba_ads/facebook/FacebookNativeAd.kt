@@ -9,7 +9,7 @@ import android.view.View
 import android.widget.*
 import com.facebook.ads.*
 import com.facebook.shimmer.ShimmerFrameLayout
-import com.simbaone.simba_ads.R
+import com.simbaone.R
 import com.simbaone.simba_ads.utils.SmUtils
 
 class FacebookNativeAd(private val context: Context, private val attrs: AttributeSet) :

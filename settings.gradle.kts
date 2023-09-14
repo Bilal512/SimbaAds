@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AdsLibrary"
 include(":app")
-include(":simba_ads")
+include(":ads")

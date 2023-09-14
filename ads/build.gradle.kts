@@ -10,11 +10,11 @@ plugins {
 val githubProperties = Properties()
 githubProperties.load(FileInputStream(rootProject.file("github.properties")))
 
-val versionName get() = "1.0.0"
-val getArtificatId = "simba_ads"
+val versionName get() = "1.0.2"
+val getArtificatId = "ads"
 
 android {
-    namespace = "com.simbaone.simba_ads"
+    namespace = "com.simbaone"
     compileSdk = 33
 
     defaultConfig {
