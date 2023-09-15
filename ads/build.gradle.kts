@@ -10,7 +10,7 @@ plugins {
 val githubProperties = Properties()
 githubProperties.load(FileInputStream(rootProject.file("github.properties")))
 
-val versionName get() = "1.0.2"
+val versionName get() = "1.0.4"
 val getArtificatId = "ads"
 
 android {
